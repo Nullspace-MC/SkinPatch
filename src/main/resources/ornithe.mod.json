@@ -1,29 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "example-mod",
+  "id": "skinpatch",
   "version": "${version}",
-
-  "name": "example mod",
-  "description": "enter a description here",
+  "name": "SkinPatch",
+  "description": "Mod meant to fix player's skins not showing up in version 1.7 ",
   "authors": [
-    "YourNameHere"
+    "SRAZKVT"
   ],
   "contact": {
   },
-
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/example/icon.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "org.example.example.Entrypoint::initialize"
-    ]
-  },
+  "environment": "client",
   "mixins": [
-    "example.mixins.json"
-  ],
-
-  "depends": {
-  }
+    "skinfix.mixins.json"
+  ]
 }
