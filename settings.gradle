@@ -1,0 +1,15 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = 'Ornithe'
+            url = 'https://maven.ornithemc.net/releases'
+        }
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = "example-mod"
