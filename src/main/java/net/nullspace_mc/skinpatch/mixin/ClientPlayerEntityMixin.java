@@ -3,7 +3,7 @@ package net.nullspace_mc.skinpatch.mixin;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.living.player.ClientPlayerEntity;
 import net.nullspace_mc.skinpatch.SkinPatch;
 import net.nullspace_mc.skinpatch.exceptions.TextureNotFoundException;
@@ -36,7 +36,7 @@ public class ClientPlayerEntityMixin {
         try {
             connection = (HttpURLConnection) new URL(
                     mojangEndpointUsernameToUUID + playerName
-            ).openConnection(MinecraftClient.getInstance().getNetworkProxy());
+            ).openConnection(Minecraft.getInstance().getNetworkProxy());
             connection.setDoInput(true);
             connection.setDoOutput(false);
             connection.connect();
@@ -69,7 +69,7 @@ public class ClientPlayerEntityMixin {
         try {
             connection = (HttpURLConnection) new URL(
                     mojangEndpointUUIDToSkinCape + uuid
-            ).openConnection(MinecraftClient.getInstance().getNetworkProxy());
+            ).openConnection(Minecraft.getInstance().getNetworkProxy());
             connection.setDoInput(true);
             connection.setDoOutput(false);
             connection.connect();
